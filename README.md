@@ -1,12 +1,12 @@
 ## extensions starter (boilerplate)
 
-starter project to start building browser extension for any of the popular browsers, with focus on Typescript and React
+starter repo for building browser extensions for any of the popular browsers, with a focus on Typescript and React
 
 ### features
 
 - [ ] manifest
-  - [x] v3
   - [ ] ~~v2~~
+  - [x] v3
 - [ ] browsers
   - [x] chromium
   - [ ] firefox
