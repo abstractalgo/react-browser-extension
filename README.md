@@ -2,12 +2,12 @@
 
 starter repo for building browser extensions for any of the popular browsers, with a focus on Typescript and React
 
-- :atom_symbol: content scripts, popup and options page as three separate, modern React apps (v18.x)
-- 𝙏𝙎 Typescript (4.5+) support for all pages and background scripts (i.e. service workers)
-- 💬 a common, TS-friendly communication channel and storage for all these apps and scripts
+- :atom_symbol: content scripts, popup and options page as three separate React (v18.x+) apps
+- 𝙏𝙎 Typescript (4.5+) support for all apps and other scripts
+- 💬 a common communication channel and storage for all these apps and scripts
 - 🧩 works with Manifest V3 (i.e. works with all Chromium-based browsers and soon Firefox)
 
-### features
+### todo
 
 - **browsers**
   - [x] chromium (v3 manifest)
