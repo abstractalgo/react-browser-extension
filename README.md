@@ -2,11 +2,10 @@
 
 starter repo for building browser extensions for any of the popular browsers, with a focus on Typescript and React
 
-in short, here's what to expect:
-
-| browsers (manifest version) | React | Typescript |
-| --------------------------- | ----- | ---------- |
-| chrome (v3)                 | 17.x  | 4.5        |
+- [x] content scripts, popup and options page as three separate, moodern React apps (v17.x)
+- [x] Typescript (4.5+) support for all pages and background scripts (i.e. service workers)
+- [x] a common, TS-friendly communication channel and storage for all these apps and scripts
+- [x] works with Manifest V3 (i.e. works with all Chromium-based browsers and soon Firefox)
 
 ### features
 
@@ -15,11 +14,8 @@ in short, here's what to expect:
   - [ ] firefox (v2? v3?)
   - [ ] safari
 - **dev tools**
-  - [x] typescript support
   - [ ] dev pipeline (watcher, hot reload, incremental builds, sim tabs env)
   - [ ] build pipeline (for chrome, for firefox)
-  - [ ] test pipeline
-  - [ ] monorepo setup
 - **logic**
   - [ ] content script
   - [ ] popup script
