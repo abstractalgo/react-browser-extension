@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "build:setup": "rm -rf dist && mkdir dist && cp -v meta/* dist",
+    "build:options": "cp -v options/* dist",
     "build:popup": "cp popup/popup.html dist/popup.html",
     "build:background": "tsc background/background.ts --outDir dist",
     "build:content": "cp content_scripts/content-root.css dist/content-root.css && tsc content_scripts/content-root.ts --outDir dist && (tsc --removeComments content_scripts/app/config-overrides.ts || true) && cd content_scripts/app && (yarn react-app-rewired build || true) && cp build/main.js ../../dist/content-react.js",
-    "build": "yarn build:setup && yarn build:popup && yarn build:background && yarn build:content"
+    "build": "yarn build:setup && yarn build:options && yarn build:popup && yarn build:background && yarn build:content"
   }
+
 }
