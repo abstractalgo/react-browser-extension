@@ -77,7 +77,7 @@ module.exports = function override(config: webpack.Configuration, env: Record<st
 
   // for initial chunks
   // config.output.filename = 'static/js/[name].js';
-  config.output.filename = 'content-main.js';
+  config.output.filename = 'options-main.js';
 
   // for non-initial chunks (hopefully none of them)
   // config.output.chunkFilename = 'static/js/nic-[id].js';

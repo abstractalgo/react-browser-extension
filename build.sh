@@ -15,11 +15,21 @@ cp icon.png $OUTPUT_DIR/icon.png
 
 # build options page
 echo "(2/5) Building options page..."
-cp options/* $OUTPUT_DIR
+cd options
+tsc --removeComments config-overrides.ts
+yarn build
+cp build/index.html ../$OUTPUT_DIR/options.html
+cp build/options-main.js ../$OUTPUT_DIR/options-main.js
+cd ..
 
 # build popup
 echo "(3/5) Building popup page..."
-cp popup/popup.html $OUTPUT_DIR/popup.html
+cd popup
+tsc --removeComments config-overrides.ts
+yarn build
+cp build/index.html ../$OUTPUT_DIR/popup.html
+cp build/popup-main.js ../$OUTPUT_DIR/popup-main.js
+cd ..
 
 # build worker
 echo "(4/5) Building worker scripts..."
@@ -27,11 +37,13 @@ tsc worker/background.ts --outDir $OUTPUT_DIR
 
 # build content
 echo "(5/5) Building content scripts..."
-cp content_scripts/content-root.css $OUTPUT_DIR/content-root.css
-tsc content_scripts/content-root.ts --outDir $OUTPUT_DIR
-tsc --removeComments content_scripts/app/config-overrides.ts
-cd content_scripts/app
-yarn react-app-rewired build
-cp build/main.js ../../$OUTPUT_DIR/content-react.js
+cd content_scripts
+cp content-root.css ../$OUTPUT_DIR/content-root.css
+tsc content-root.ts --outDir ../$OUTPUT_DIR
+cd app
+tsc --removeComments config-overrides.ts
+yarn build
+cp build/content-main.js ../../$OUTPUT_DIR/content-react.js
+cd ../..
 
 echo "Done."
