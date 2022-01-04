@@ -2,15 +2,17 @@
 
 starter repo for building browser extensions for any of the popular browsers, with a focus on Typescript and React
 
-| manifest | React | Typescript |
-| -------- | ----- | ---------- |
-| V3       | 17.x  | 4.5        |
+in short, here's what to expect:
+
+| browsers (manifest version) | React | Typescript |
+| --------------------------- | ----- | ---------- |
+| chrome (v3), firefox (v2)   | 17.x  | 4.5        |
 
 ### features
 
 - **browsers**
   - [x] chromium (v3 manifest)
-  - [ ] firefox
+  - [ ] firefox (v2 manifest)
   - [ ] safari
 - **dev tools**
   - [ ] dev pipeline (watcher, hot reload, incremental builds, sim tabs env)
@@ -57,7 +59,7 @@ starter repo for building browser extensions for any of the popular browsers, wi
 
 communication between background, popup and content scripts. building the app (custom config with react-app-rewired) into a single JS file (no extra CSS, no different chunks, perf implications). typescript everywhere (@types/chrome, webpack config).
 
-caveats: assets. no router. differences between browsers (manifest format, background scripts vs service workers, assets vs web accessible resources, differences in browser API, https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/)
+caveats: assets. no router. differences between browsers (manifest format, background scripts vs service workers, assets vs web accessible resources, differences in browser API, https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/, MV2 vs MV3)
 
 recipes: monorepo. shared lib.
 
