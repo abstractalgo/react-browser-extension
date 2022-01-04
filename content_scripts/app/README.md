@@ -4,11 +4,8 @@ starter repo for building browser extensions for any of the popular browsers, wi
 
 ### features
 
-- **manifest**
-  - [ ] ~~v2~~
-  - [x] v3
 - **browsers**
-  - [x] chromium
+  - [x] chromium (v3 manifest)
   - [ ] firefox
   - [ ] safari
 - **dev tools**
@@ -23,6 +20,10 @@ starter repo for building browser extensions for any of the popular browsers, wi
   - [ ] cross-ctx communication
 - [x] typescript support
 - [ ] static assets
+- **storage**
+  - [ ] per tab
+  - [ ] shared
+  - [ ] synced
 - **styling**
   - [x] css
   - [x] sass

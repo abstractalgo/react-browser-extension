@@ -76,9 +76,11 @@ module.exports = function override(config: webpack.Configuration, env: Record<st
   // );
 
   // for initial chunks
-  config.output.filename = 'static/js/[name].js';
-  // for non-initial chunks
-  config.output.chunkFilename = 'static/js/nic-[id].js';
+  // config.output.filename = 'static/js/[name].js';
+  config.output.filename = '[name].js';
+
+  // for non-initial chunks (hopefully none of them)
+  // config.output.chunkFilename = 'static/js/nic-[id].js';
 
   return config;
 };

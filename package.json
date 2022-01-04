@@ -3,49 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "react-app-rewired start",
-    "build-s": "yarn tsc --removeComments config-overrides.ts",
-    "build": "react-app-rewired build",
-    "test": "react-app-rewired test"
-  },
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.14.1",
-    "@testing-library/react": "^12.0.0",
-    "@testing-library/user-event": "^13.2.1",
-    "@types/jest": "^27.0.1",
-    "@types/node": "^17.0.7",
-    "@types/react": "^17.0.20",
-    "@types/react-dom": "^17.0.9",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "5.0.0",
-    "typescript": "^4.5.4"
-  },
-  "devDependencies": {
-    "@types/webpack": "^5.28.0",
-    "mini-css-extract-plugin": "^2.4.5",
-    "prettier": "^2.5.1",
-    "react-app-rewired": "^2.1.11",
-    "sass": "^1.45.2",
-    "serve": "^13.0.2",
-    "ts-node": "^10.4.0"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "build:setup": "rm -rf dist && mkdir dist && cp -v meta/* dist",
+    "build:popup": "cp popup/popup.html dist/popup.html",
+    "build:background": "tsc background/background.ts --outDir dist",
+    "build:content": "cp content_scripts/content-root.css dist/content-root.css && tsc content_scripts/content-root.ts --outDir dist && (tsc --removeComments content_scripts/app/config-overrides.ts || true) && cd content_scripts/app && (yarn react-app-rewired build || true) && cp build/main.js ../../dist/content-react.js",
+    "build": "yarn build:setup && yarn build:popup && yarn build:background && yarn build:content"
   }
 }

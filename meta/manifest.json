@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "version": "1.0",
+  "name": "Extension Starter",
+  "description": "Extensions go brrrr",
+  "author": "Dragan Okanovic <dragan.okan@gmail.com>",
+  "homepage_url": "https://github.com/abstractalgo/ext-react",
+  "icons": {
+    "16": "icon.png",
+    "32": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "storage"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [{
+    "matches": [
+      "<all_urls>"
+    ],
+    "js": ["content-root.js", "content-react.js"],
+    "css": ["content-root.css"]
+  }]
+}
