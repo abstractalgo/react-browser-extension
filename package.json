@@ -24,6 +24,7 @@
   "devDependencies": {
     "@types/webpack": "^5.28.0",
     "mini-css-extract-plugin": "^2.4.5",
+    "prettier": "^2.5.1",
     "react-app-rewired": "^2.1.11",
     "sass": "^1.45.2",
     "serve": "^13.0.2",

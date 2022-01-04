@@ -1,8 +1,8 @@
-import * as path from "path";
-import * as webpack from "webpack";
+import * as path from 'path';
+import * as webpack from 'webpack';
 // in case you run into any typescript error when configuring `devServer`
-import "webpack-dev-server";
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+import 'webpack-dev-server';
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 /*
 
@@ -24,10 +24,7 @@ GENERATE_SOURCEMAP = false
 
 */
 
-module.exports = function override(
-  config: webpack.Configuration,
-  env: Record<string, string>
-) {
+module.exports = function override(config: webpack.Configuration, env: Record<string, string>) {
   // no source maps
   config.devtool = false;
 
@@ -45,25 +42,23 @@ module.exports = function override(
   // CSS remove MiniCssPlugin
   config.plugins = config.plugins.filter(
     // @ts-ignore
-    (plugin) => !(plugin instanceof MiniCssExtractPlugin)
+    (plugin) => !(plugin instanceof MiniCssExtractPlugin),
   );
   // CSS replaces all MiniCssExtractPlugin.loader with style-loader
-  config.module.rules = (config.module.rules as webpack.RuleSetRule[]).map(
-    (moduleRule) => {
-      moduleRule.oneOf = moduleRule.oneOf?.map((rule) => {
-        if (!rule.hasOwnProperty("use")) return rule;
-        return Object.assign({}, rule, {
-          // @ts-ignore
-          use: rule.use.map((options) =>
-            /mini-css-extract-plugin/.test(options.loader)
-              ? { loader: require.resolve("style-loader"), options: {} }
-              : options
-          ),
-        });
+  config.module.rules = (config.module.rules as webpack.RuleSetRule[]).map((moduleRule) => {
+    moduleRule.oneOf = moduleRule.oneOf?.map((rule) => {
+      if (!rule.hasOwnProperty('use')) return rule;
+      return Object.assign({}, rule, {
+        // @ts-ignore
+        use: rule.use.map((options) =>
+          /mini-css-extract-plugin/.test(options.loader)
+            ? { loader: require.resolve('style-loader'), options: {} }
+            : options,
+        ),
       });
-      return moduleRule;
-    }
-  );
+    });
+    return moduleRule;
+  });
 
   // config.module.rules = (config.module.rules as webpack.RuleSetRule[]).map(
   //   (moduleRule) => {
@@ -81,9 +76,9 @@ module.exports = function override(
   // );
 
   // for initial chunks
-  config.output.filename = "static/js/[name].js";
+  config.output.filename = 'static/js/[name].js';
   // for non-initial chunks
-  config.output.chunkFilename = "static/js/nic-[id].js";
+  config.output.chunkFilename = 'static/js/nic-[id].js';
 
   return config;
 };
