@@ -15,24 +15,24 @@ in short, here's what to expect:
   - [ ] firefox (v2? v3?)
   - [ ] safari
 - **dev tools**
+  - [x] typescript support
   - [ ] dev pipeline (watcher, hot reload, incremental builds, sim tabs env)
   - [ ] build pipeline (for chrome, for firefox)
   - [ ] test pipeline
   - [ ] monorepo setup
 - **logic**
   - [ ] content script
-  - [ ] background script (service workers)
   - [ ] popup script
+  - [ ] service workers ("background scripts" in MV2)
   - [ ] options page
   - [ ] ~~sidebar (*firefox-only*)~~
-  - [ ] cross-ctx communication
-  - [ ] storage
-    - [ ] options / config
-    - [ ] per tab
-    - [ ] shared
-    - [ ] synced
-- [x] typescript support
-- [ ] static assets
+  - [ ] cross-context communication
+    - [ ] storage
+      - [ ] options / config
+      - [ ] per tab
+      - [ ] shared
+      - [ ] synced
+    - [ ] static assets
 - **styling**
   - [x] css
   - [x] sass
@@ -49,11 +49,11 @@ in short, here's what to expect:
 
 ### how it works
 
-- `/meta` holds basic information about the extension, its manifest and icons
-- `/background` is where the code for the service worker or a background script lives. these scripts never can never have any UI as a part of it
+- root folder holds basic information about the extension, its manifest and icons
 - `/content_scripts` is a place for code that has to do with content that becomes part of the page - injected JS and CSS. within `/app` holds the React app where you basically write entirety of logic, and remaining files are there to create a container for your React root (similar how `div#root` exists in `public/index.html` when using regular CRA).
 - `/popup` is a place for another React application that...
 - `/options` is another React app...
+- `/worker` is where the code for the service worker or a background script lives. these scripts never can never have any UI as a part of it
 
 (show build output, show how each part relates to section in manifest, record a video walkthrough)
 
