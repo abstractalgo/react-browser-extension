@@ -1,4 +1,4 @@
-## extensions starter (boilerplate)
+## web extensions React starter
 
 starter repo for building browser extensions for any of the popular browsers, with a focus on Typescript and React
 
