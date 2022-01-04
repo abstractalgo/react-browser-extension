@@ -6,13 +6,13 @@ in short, here's what to expect:
 
 | browsers (manifest version) | React | Typescript |
 | --------------------------- | ----- | ---------- |
-| chrome (v3), firefox (v2)   | 17.x  | 4.5        |
+| chrome (v3)                 | 17.x  | 4.5        |
 
 ### features
 
 - **browsers**
   - [x] chromium (v3 manifest)
-  - [ ] firefox (v2 manifest)
+  - [ ] firefox (v2? v3?)
   - [ ] safari
 - **dev tools**
   - [ ] dev pipeline (watcher, hot reload, incremental builds, sim tabs env)
