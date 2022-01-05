@@ -26,12 +26,17 @@ Here's what you get:
 
 ## resources
 
+Docs and guides:
+
 - [Chrome API reference](https://developer.chrome.com/docs/extensions/reference/)
 - [MV3 architecture overview](https://developer.chrome.com/docs/extensions/mv3/architecture-overview/) (Chrome)
 - [Manifest V3 file format](https://developer.chrome.com/docs/extensions/mv3/manifest/)
 - [Anatomy of a Web Extension](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension) (Firefox)
 - [Building a cross-browser extension](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Build_a_cross_browser_extension)
 - [Porting a Google Chrome extension](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/)
+
+Useful code repos:
+
 - [mozilla/webextension-polyfill](https://github.com/mozilla/webextension-polyfill)
 - [mozilla/web-ext](https://github.com/mozilla/web-ext)
 - [GoogleChrome/chrome-extensions-samples](https://github.com/GoogleChrome/chrome-extensions-samples) (non-React)
