@@ -18,7 +18,7 @@ Here's what you get:
 - build/compile your extension, load it in the browser and try it there
   - run `yarn build` from the root folder (this executes `./build.sh`)
 - pack the extension
-  - run `yarn pack` from the root folder (this executes `./pack.sh`)
+  - run `yarn pack-ext` from the root folder (this executes `./pack-ext.sh`)
 - publish it on the web stores
   - instructions for [distributing](https://developer.chrome.com/docs/extensions/mv3/hosting/) it to [Chrome Web Store][https://chrome.google.com/webstore/category/extensions]
   - [publishing](https://extensionworkshop.com/documentation/publish/) for Firefox

@@ -4,7 +4,6 @@
   "private": true,
   "scripts": {
     "build": "./build.sh",
-    "pack": "./pack.sh"
+    "pack-ext": "./pack-ext.sh"
   }
-
 }
