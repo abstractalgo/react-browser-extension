@@ -90,10 +90,15 @@ caveats: assets.
 - **browsers**
   - [x] chromium (v3 manifest)
   - [ ] firefox (v2? v3?)
-  - [ ] safari
+  - [ ] safari (?)
 - **dev tools**
   - [ ] dev pipeline (watcher, hot reload, incremental builds, sim tabs env)
-  - [ ] build pipeline (for chrome, for firefox)
+  - [ ] build pipeline
+    - [x] for chrome
+    - [ ] for firefox
+  - [ ] package
+    - [ ] for chrome
+    - [ ] for firefox
 - **logic**
   - [ ] cross-context communication
     - [ ] storage
