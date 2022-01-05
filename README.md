@@ -7,26 +7,6 @@ starter repo for building browser extensions with React and Typescript
 - 💬 a common communication channel and storage for all these apps and scripts
 - 🧩 works with Manifest V3 (i.e. works with all Chromium-based browsers and soon Firefox)
 
-### todo
-
-- [ ] working example extension
-- [ ] shared folders
-- **browsers**
-  - [x] chromium (v3 manifest)
-  - [ ] firefox (v2? v3?)
-  - [ ] safari
-- **dev tools**
-  - [ ] dev pipeline (watcher, hot reload, incremental builds, sim tabs env)
-  - [ ] build pipeline (for chrome, for firefox)
-- **logic**
-  - [ ] cross-context communication
-    - [ ] storage
-      - [ ] options / config
-      - [ ] per tab
-      - [ ] shared
-      - [ ] synced
-    - [ ] static assets
-
 ### how to get started developing your own extension
 
 - learn more about WebExtension (see [resources](#resources) section)
@@ -44,8 +24,6 @@ starter repo for building browser extensions with React and Typescript
 - package
 - submitting to stores
 
----
-
 ## resources
 
 - [Chrome API reference](https://developer.chrome.com/docs/extensions/reference/)
@@ -55,8 +33,6 @@ starter repo for building browser extensions with React and Typescript
 - [mozilla/webextension-polyfill](https://github.com/mozilla/webextension-polyfill)
 - [mozilla/web-ext](https://github.com/mozilla/web-ext)
 - [GoogleChrome/chrome-extensions-samples](https://github.com/GoogleChrome/chrome-extensions-samples) (non-React)
-
----
 
 ## how it works
 
@@ -94,3 +70,25 @@ communication between background, popup and content scripts. typescript everywhe
 (recipes: monorepo. shared lib.)
 
 caveats: assets. no router. differences between browsers (manifest format, background scripts vs service workers, assets vs web accessible resources, differences in browser API, https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/, MV2 vs MV3)
+
+---
+
+### todo
+
+- [ ] working example extension
+- [ ] shared folders
+- **browsers**
+  - [x] chromium (v3 manifest)
+  - [ ] firefox (v2? v3?)
+  - [ ] safari
+- **dev tools**
+  - [ ] dev pipeline (watcher, hot reload, incremental builds, sim tabs env)
+  - [ ] build pipeline (for chrome, for firefox)
+- **logic**
+  - [ ] cross-context communication
+    - [ ] storage
+      - [ ] options / config
+      - [ ] per tab
+      - [ ] shared
+      - [ ] synced
+    - [ ] static assets
