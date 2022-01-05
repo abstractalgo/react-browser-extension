@@ -15,7 +15,7 @@ Here's what you get:
 - update information inside `manifest.json` (name, description, homepage,...) and update icons
 - code and test your React apps within `/content_scripts/app`, `/options` and `/popup`
   - all three folders are regular `create-react-app` apps, so just refer to their `package.json` for scripts and code it like any other React app
-  - if you don't need some of these apps or scripts, simply remove them from the project and remve their build steps in the build pipeline (inside `./build.sh`)
+  - if you don't need some of these apps or scripts, simply remove them from the project and remove their build steps in the build pipeline (inside `./build.sh`)
 - build/compile your extension, load it in the browser and try it there
   - run `yarn build` from the root folder (this executes `./build.sh`)
   - you can use generated `./build` folder to load the "unpacked" versin of the extension in the browser and test it locally (see how [for Chrome](https://developer.chrome.com/docs/extensions/mv3/getstarted/#manifest) or [for Firefox](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension#trying_it_out))
