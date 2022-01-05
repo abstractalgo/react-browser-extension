@@ -4,6 +4,15 @@ OUTPUT_DIR=build
 
 
 
+# update overrides
+# cd option
+# yarn rewire-config
+# cd ../popup
+# yarn rewire-config
+# cd content_scripts/app
+# yarn rewire-config
+# cd ../..
+
 # cleanup
 echo "(1/5) Preparing..."
 rm -rf $OUTPUT_DIR

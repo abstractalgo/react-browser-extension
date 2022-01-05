@@ -5,7 +5,7 @@
   "scripts": {
     "start": "react-app-rewired start",
     "test": "react-app-rewired test",
-    "build:rewire-config": "tsc --removeComments config-overrides.ts",
+    "rewire-config": "tsc --removeComments config-overrides.ts",
     "build": "yarn react-app-rewired build"
   },
   "dependencies": {
