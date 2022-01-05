@@ -23,7 +23,6 @@ cd ..
 
 # build popup
 echo "(3/5) Building popup page..."
-
 cd popup
 yarn build
 cp build/index.html ../$OUTPUT_DIR/popup.html
