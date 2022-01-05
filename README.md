@@ -9,7 +9,7 @@ starter repo for building browser extensions with React and Typescript
 
 ### how to get started developing your own extension
 
-- learn more about WebExtension (see [resources](#resources) section)
+- learn more about WebExtensions and Manifest (see [resources](#resources) section)
 - update information inside `manifest.json` (name, description, homepage,...) and update icons
 - code and test your React apps within `/content_scripts/app`, `/options` and `/popup` (if you don't need some of those, simply remove them from project and their steps in the build pipeline; same goes for the service worker/background script)
 - build/compile your extension, load it in the browser and try it there
