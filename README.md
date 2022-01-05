@@ -9,9 +9,9 @@ Here's what you get:
 - 💬 a common communication channel and storage for all these apps and scripts
 - 🧩 works with Manifest V3 (i.e. works with all Chromium-based browsers and soon Firefox)
 
-## how to get started developing your own extension
+## developing your own extension
 
-- learn more about WebExtensions and Manifest (see [resources](#resources) section)
+- learn more about WebExtensions and Manifest files (see [resources](#resources) section)
 - update information inside `manifest.json` (name, description, homepage,...) and update icons
 - code and test your React apps within `/content_scripts/app`, `/options` and `/popup`
   - all three folders are regular `create-react-app` apps, so just refer to their `package.json` for scripts and code it like any other React app
