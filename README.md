@@ -18,8 +18,8 @@ Here's what you get:
   - if you don't need some of these apps or scripts, simply remove them from the project and remove their build steps in the build pipeline (inside `./build.sh`)
 - build/compile your extension by running `yarn build` from the root folder (this executes `./build.sh`), load it in the browser and try it there
   - you can use generated `./build` folder to load the "unpacked" version of the extension in the browser and test it locally (see how [for Chrome](https://developer.chrome.com/docs/extensions/mv3/getstarted/#manifest) or [for Firefox](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension#trying_it_out))
-- pack the extension
-  - run `yarn pack-ext` from the root folder (this executes `./pack-ext.sh`)
+- pack the extension into a single archive
+  - run `yarn zip` from the root folder
 - publish it on the web stores
   - instructions for [publishing to Chrome Web Store](https://developer.chrome.com/docs/extensions/mv3/hosting/)
   - instructions for [publishing to Firefox Add-ons](https://extensionworkshop.com/documentation/publish/)
