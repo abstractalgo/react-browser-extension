@@ -22,7 +22,7 @@ Here's what you get:
   - run `yarn pack-ext` from the root folder (this executes `./pack-ext.sh`)
 - publish it on the web stores
   - instructions for [publishing to Chrome Web Store](https://developer.chrome.com/docs/extensions/mv3/hosting/)
-  - instructions for [publishing for Firefox Add-ons](https://extensionworkshop.com/documentation/publish/)
+  - instructions for [publishing to Firefox Add-ons](https://extensionworkshop.com/documentation/publish/)
 
 ## resources
 
