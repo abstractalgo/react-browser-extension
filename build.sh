@@ -16,7 +16,6 @@ cp icon.png $OUTPUT_DIR/icon.png
 # build options page
 echo "(2/5) Building options page..."
 cd options
-tsc --removeComments config-overrides.ts
 yarn build
 cp build/index.html ../$OUTPUT_DIR/options.html
 cp build/options-main.js ../$OUTPUT_DIR/options-main.js
@@ -24,8 +23,8 @@ cd ..
 
 # build popup
 echo "(3/5) Building popup page..."
+
 cd popup
-tsc --removeComments config-overrides.ts
 yarn build
 cp build/index.html ../$OUTPUT_DIR/popup.html
 cp build/popup-main.js ../$OUTPUT_DIR/popup-main.js
@@ -41,7 +40,6 @@ cd content_scripts
 cp content-root.css ../$OUTPUT_DIR/content-root.css
 tsc content-root.ts --outDir ../$OUTPUT_DIR
 cd app
-tsc --removeComments config-overrides.ts
 yarn build
 cp build/content-main.js ../../$OUTPUT_DIR/content-react.js
 cd ../..

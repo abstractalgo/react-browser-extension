@@ -46,5 +46,4 @@ yarn-debug.log*
 yarn-error.log*
 
 # other
-config-overrides.js
 /dist
