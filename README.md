@@ -37,8 +37,7 @@ Here's what you get:
 
 ## how it works
 
-Root folder holds basic information about the extension, i.e. its manifest and icons.
-
+- the root folder (`./`) holds basic information about the extension, i.e. its manifest and icons.
 - `/content_scripts` is a place for extra JS and CSS that gets injected into the pages. `/app` folder within it holds the React app where you basically write the entirety of logic, and remaining files are there to create a container for your React root (similar to how `div#root` exists in `public/index.html` when using regular CRA).
 - `/popup` is a place for another React application that gets displayed as a popup when clicking on the extension's icon displayed near the address bar in the browser.
 - `/options` hosts a React app that serves an Options page for the extension where you can configure and persists some common options.
