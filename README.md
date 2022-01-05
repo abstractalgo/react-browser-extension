@@ -1,6 +1,8 @@
 # Web Extensions React starter
 
-starter repo for building browser extensions with React and Typescript
+A starter repo for building browser extensions with React and Typescript.
+
+Here's what you get:
 
 - :atom_symbol: content scripts, popup and options page as three separate React (v18.x+) apps
 - 𝙏𝙎 Typescript (4.5+) on all apps and other scripts
