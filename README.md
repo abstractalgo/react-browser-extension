@@ -9,22 +9,19 @@ Here's what you get:
 - 💬 a common communication channel and storage for all these apps and scripts
 - 🧩 works with Manifest V3 (i.e. works with all Chromium-based browsers and soon Firefox)
 
-### how to get started developing your own extension
+## how to get started developing your own extension
 
 - learn more about WebExtensions and Manifest (see [resources](#resources) section)
 - update information inside `manifest.json` (name, description, homepage,...) and update icons
 - code and test your React apps within `/content_scripts/app`, `/options` and `/popup` (if you don't need some of those, simply remove them from project and their steps in the build pipeline; same goes for the service worker/background script)
+  - all three folders are regular `create-react-app` apps, so just refer to their `package.json` for scripts and code it like any other React app
 - build/compile your extension, load it in the browser and try it there
+  - run `yarn build` from the root folder (this executes `./build.sh`)
 - pack the extension
+  - run `yarn pack` from the root folder (this executes `./pack.sh`)
 - publish it on the web stores
-
-### dev
-
-- local dev
-- build for chrome/firefox/...
-- load into chrome/firefox/...
-- package
-- submitting to stores
+  - instructions for [distributing](https://developer.chrome.com/docs/extensions/mv3/hosting/) it to [Chrome Web Store][https://chrome.google.com/webstore/category/extensions]
+  - [publishing](https://extensionworkshop.com/documentation/publish/) for Firefox
 
 ## resources
 
@@ -32,6 +29,7 @@ Here's what you get:
 - [MV3 architecture overview](https://developer.chrome.com/docs/extensions/mv3/architecture-overview/) (Chrome)
 - [Manifest V3 file format](https://developer.chrome.com/docs/extensions/mv3/manifest/)
 - [Anatomy of a Web Extension](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension) (Firefox)
+- [Building a cross-browser extension](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Build_a_cross_browser_extension)
 - [mozilla/webextension-polyfill](https://github.com/mozilla/webextension-polyfill)
 - [mozilla/web-ext](https://github.com/mozilla/web-ext)
 - [GoogleChrome/chrome-extensions-samples](https://github.com/GoogleChrome/chrome-extensions-samples) (non-React)
