@@ -48,7 +48,7 @@ Web extensions, and thus this repo, consist of four large parts, plus the manife
 
 All React apps inside the project have been initialised with a standard `create-react-app`, but we use `react-app-rewired` (see [on npm](https://www.npmjs.com/package/react-app-rewired)) to override some of the Webpack configuration without ejecting from CRA. Each of the React apps in the project has its own `config-overrides.js` file that gets consumed during the build phase by the `react-app-rewired`.
 
-Notable webpack config overrides are:
+Notable Webpack config overrides are:
 - removing source maps (see the line with `config.optimization.runtimeChunk`)
 - bundling everything into a single JS file, i.e. no extra chunks (see the line with `config.optimization.splitChunks`)
 - removing MiniCssExtractPlugin thus keeping all of the CSS bundled inside of JS
