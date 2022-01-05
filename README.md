@@ -37,11 +37,12 @@ Here's what you get:
 
 ## how it works
 
-- root folder holds basic information about the extension, its manifest and icons
-- `/content_scripts` is a place for code that has to do with content that becomes part of the page - injected JS and CSS. within `/app` holds the React app where you basically write entirety of logic, and remaining files are there to create a container for your React root (similar how `div#root` exists in `public/index.html` when using regular CRA).
-- `/popup` is a place for another React application that...
-- `/options` is another React app...
-- `/worker` is where the code for the service worker or a background script lives. these scripts never can never have any UI as a part of it
+Root folder holds basic information about the extension, i.e. its manifest and icons.
+
+- `/content_scripts` is a place for extra JS and CSS that gets injected into the pages. `/app` folder within it holds the React app where you basically write the entirety of logic, and remaining files are there to create a container for your React root (similar to how `div#root` exists in `public/index.html` when using regular CRA).
+- `/popup` is a place for another React application that gets displayed as a popup when clicking on the extension's icon displayed near the address bar in the browser.
+- `/options` hosts a React app that serves an Options page for the extension where you can configure and persists some common options.
+- `/worker` is a place for a service worker (MV3) or a background script (MV2). These scripts can never have any UI as a part of it, so it consists only of TS/JS files.
 
 All React apps inside the project have been initialised with standard `create-react-app`, but we use `react-app-rewired` ([on npm](https://www.npmjs.com/package/react-app-rewired)) to override some of the Webpack configuration without ejecting. Each of the React apps in the project has its own `config-overrides.js` file that gets consumed during the build phase by the `react-app-rewired`.
 
