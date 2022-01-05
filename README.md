@@ -51,11 +51,30 @@ starter repo for building browser extensions for any of the popular browsers, wi
 - `/options` is another React app...
 - `/worker` is where the code for the service worker or a background script lives. these scripts never can never have any UI as a part of it
 
-(show build output, show how each part relates to section in manifest, record a video walkthrough)
+#### build output
+
+<img src="https://user-images.githubusercontent.com/1355455/148199342-326067a8-1d72-4849-a057-e8737ae5edaf.png" height="200"/>
+
+You can see how that exactly matches the entry points defined inside `manifest.json`:
+
+<img src="https://user-images.githubusercontent.com/1355455/148199900-da93d2e5-63d3-4174-a5d6-9b93f78217ff.png" height="200" />
+
+(using react-app-rewired for single file bundle, no separate css, change output filename. also to allow TS to load files outside root scope)
+
+(record a video walkthrough)
 
 communication between background, popup and content scripts. building the app (custom config with react-app-rewired) into a single JS file (no extra CSS, no different chunks, perf implications). typescript everywhere (@types/chrome, webpack config).
 
 caveats: assets. no router. differences between browsers (manifest format, background scripts vs service workers, assets vs web accessible resources, differences in browser API, https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/, MV2 vs MV3)
+
+### how to get started developing your own extension
+
+- update information inside `manifest.json` (name, description, homepage,...) and update icons
+- code and test your React apps within `/content_scripts/app`, `/options` and `/popup` (if you don't need some of those, simply remove them from project and their steps in the build pipeline; same goes for the service worker/background script)
+- build/compile your extension, load it in the browser and try it there
+- pack the extension
+- publish it on the web stores
+
 
 recipes: monorepo. shared lib.
 
