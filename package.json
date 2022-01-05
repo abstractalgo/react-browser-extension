@@ -3,13 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build:setup": "rm -rf build && mkdir build",
-    "build:meta": "cp manifest.json build/manifest.json && cp icon.png build/icon.png",
-    "build:options": "cp options/* build",
-    "build:popup": "cp popup/popup.html build/popup.html",
-    "build:worker": "tsc worker/background.ts --outDir build",
-    "build:content": "cp content_scripts/content-root.css build/content-root.css && tsc content_scripts/content-root.ts --outDir build && tsc --removeComments content_scripts/app/config-overrides.ts && cd content_scripts/app && yarn react-app-rewired build && cp build/main.js ../../build/content-react.js",
-    "build": "yarn build:setup && yarn build:meta && yarn build:options && yarn build:popup && yarn build:worker && yarn build:content"
+    "build": "./build.sh"
   }
 
 }
