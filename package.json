@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "build": "./build.sh",
-    "zip": "rm build.zip && zip -r build.zip build/"
+    "zip": "(rm packed.zip || true) && zip -r packed.zip build/"
   },
   "devDependencies": {
     "web-ext": "^6.6.0"
