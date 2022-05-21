@@ -43,15 +43,15 @@ Useful code repos:
 
 ## how it works
 
-Web extensions, and thus this repo, consist of four large parts, plus the manifest file specifying each of those and soome additional meta informatin. The parts are: content scripts, action/popup, options page and background scripts. A single web extension can have any combination of these, neither of all of them (i.e. all are optinal); only the manifest is mandatory.
+Web extensions, and thus this repo, consist of four large parts, plus the manifest file specifying each of those and some additional meta-information. The parts are: content scripts, action/popup, options page and background scripts. A single web extension can have any combination of these, neither of all of them (i.e. all are optional); only the manifest is mandatory.
 
-- The root folder (`./`) holds basic meta information about the extension, i.e. its manifest and icons.
-- `/content_scripts` is a place for the extra JS and CSS that gets injected into the pages that you view while your extension is installed and enabled. `/app` folder within it holds the React app where you basically write the entirety of logic, and remaining files are there to create a container for your React root (similar to how `div#root` exists in `public/index.html` when using a regular CRA).
+- The root folder (`./`) holds basic meta-information about the extension, i.e. its manifest and icons.
+- `/content_scripts` is a place for the extra JS and CSS that gets injected into the pages that you view while your extension is installed and enabled. `/app` folder within it holds the React app where you basically write the entirety of logic, and the remaining files are there to create a container for your React root (similar to how `div#root` exists in `public/index.html` when using a regular CRA).
 - `/popup` is a place for another React app that gets displayed as a popup/dropdown when clicking on the extension's icon displayed near the address bar in the browser.
 - `/options` hosts a React app that serves an Options page for the extension where you can configure and persists whatever some common options.
 - `/worker` is a place for a service worker (MV3) or a background script (MV2). These scripts can never have any UI as a part of it, so it consists only of TS/JS files, and they run in the background.
 
-All React apps inside the project have been initialised with a standard `create-react-app`, but we use `react-app-rewired` (see [on npm](https://www.npmjs.com/package/react-app-rewired)) to override some of the Webpack configuration without ejecting from CRA. Each of the React apps in the project has its own `config-overrides.js` file that gets consumed during the build phase by the `react-app-rewired`.
+All React apps inside the project have been initialized with a standard `create-react-app`, but we use `react-app-rewired` (see [on npm](https://www.npmjs.com/package/react-app-rewired)) to override some of the Webpack configuration without ejecting from CRA. Each of the React apps in the project has its own `config-overrides.js` file that gets consumed during the build phase by the `react-app-rewired`.
 
 Notable Webpack config overrides are:
 - removing source maps (see the line with `config.optimization.runtimeChunk`)
