@@ -4,7 +4,7 @@
   "name": "Extension Starter",
   "description": "Extensions go brrrr",
   "author": "Dragan Okanovic <dragan.okan@gmail.com>",
-  "homepage_url": "https://github.com/abstractalgo/ext-react",
+  "homepage_url": "https://github.com/abstractalgo/react-browser-extension",
   "icons": {
     "16": "icon.png",
     "32": "icon.png",
