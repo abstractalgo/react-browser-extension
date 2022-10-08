@@ -11,6 +11,26 @@ Here's what you get:
 
 ## developing your own extension
 
+Short version:
+
+```bash
+# install dependencies in all apps thanks to Yarn workspaces
+yarn
+
+# run
+cd content_scripts/app && yarn start
+cd options && yarn start
+cd popup && yarn start
+
+# to build
+yarn build
+
+# to package into an archive
+yarn zip
+```
+
+More details:
+
 - learn more about WebExtensions and Manifest files (see [resources](#resources) section)
 - update information inside `manifest.json` (name, description, homepage,...) and update icons
 - code and test your React apps within `/content_scripts/app`, `/options` and `/popup`

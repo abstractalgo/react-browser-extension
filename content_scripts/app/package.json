@@ -1,5 +1,5 @@
 {
-  "name": "ext-react-content-scripts-app",
+  "name": "react-browser-extension-script",
   "version": "0.1.0",
   "private": true,
   "scripts": {

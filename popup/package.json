@@ -1,5 +1,5 @@
 {
-  "name": "ext-react-options-page-app",
+  "name": "react-browser-extension-popup",
   "version": "0.1.0",
   "private": true,
   "scripts": {

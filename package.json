@@ -6,6 +6,11 @@
     "build": "./build.sh",
     "zip": "(rm packed.zip || true) && zip -r packed.zip build/"
   },
+  "workspaces": [
+    "content_scripts/app",
+    "options",
+    "popup"
+  ],
   "devDependencies": {
     "web-ext": "^6.6.0"
   }
