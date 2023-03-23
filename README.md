@@ -34,7 +34,7 @@ More details:
 - learn more about WebExtensions and Manifest files (see [resources](#resources) section)
 - update information inside `manifest.json` (name, description, homepage,...) and update icons
 - code and test your React apps within `/content_scripts/app`, `/options` and `/popup`
-  - all three folders are regular `create-react-app` apps, so just refer to their `package.json` for scripts and write code like you would for any other React app
+  - all three folders are regular React apps bundled via [Vite](https://vitejs.dev/), so just refer to their `package.json` and `vite.config.js` for config, and write code like you would for any other React app
   - if you don't need some of these apps or scripts, simply remove them from the project and remove their build steps in the build pipeline (inside `./build.sh`)
 - build/compile your extension by running `yarn build` from the root folder (this executes `./build.sh`), load it in the browser and try it there
   - you can use generated `./build` folder to load the "unpacked" version of the extension in the browser and test it locally (see how [for Chrome](https://developer.chrome.com/docs/extensions/mv3/getstarted/#manifest) or [for Firefox](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension#trying_it_out))
@@ -70,15 +70,6 @@ Web extensions, and thus this repo, consist of four large parts, plus the manife
 - `/popup` is a place for another React app that gets displayed as a popup/dropdown when clicking on the extension's icon displayed near the address bar in the browser.
 - `/options` hosts a React app that serves an Options page for the extension where you can configure and persists whatever some common options.
 - `/worker` is a place for a service worker (MV3) or a background script (MV2). These scripts can never have any UI as a part of it, so it consists only of TS/JS files, and they run in the background.
-
-All React apps inside the project have been initialized with a standard `create-react-app`, but we use `react-app-rewired` (see [on npm](https://www.npmjs.com/package/react-app-rewired)) to override some of the Webpack configuration without ejecting from CRA. Each of the React apps in the project has its own `config-overrides.js` file that gets consumed during the build phase by the `react-app-rewired`.
-
-Notable Webpack config overrides are:
-
-- removing source maps (see the line with `config.optimization.runtimeChunk`)
-- bundling everything into a single JS file, i.e. no extra chunks (see the line with `config.optimization.splitChunks`)
-- removing MiniCssExtractPlugin thus keeping all of the CSS bundled inside of JS
-- configuring output chunk filename (see the line with `config.output.filename`)
 
 By having a very predictable build output (a single JS bundle) for each part of our extension, we can hardcode their script files inside `manifest.json` and that's it - always the same output, always the same entry points and script files, i.e. no need for [programmatic injection](https://developer.chrome.com/docs/extensions/mv3/content_scripts/#programmatic), dynamic loading or anything complex.
 
